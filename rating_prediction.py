@@ -18,7 +18,7 @@ if movie_summary:
             {"role": "user", "content": f"Here is the plot synopsis: {movie_summary}\nRating:"}
         ],
         temperature=0.3,
-        max_tokens=10
+        max_tokens=100
     )
     predicted_rating = response.choices[0].message.content
     st.success(f"Predicted IMDb Rating: ⭐ {predicted_rating}")
