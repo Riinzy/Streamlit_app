@@ -14,7 +14,7 @@ if movie_summary:
     response = openai.chat.completions.create(
         model="gpt-4o-mini", 
         messages=[
-            {"role": "system", "content": "Predict the IMDb ratings based on plot synopsis of a movie. The rating is from 1 to 10. Output only number"},
+            {"role": "system", "content": "Predict the IMDb ratings based on plot synopsis of a movie. The rating is from 1 to 10."},
             {"role": "user", "content": f"Here is the plot synopsis: {movie_summary}\nRating:"}
         ],
         temperature=0.5,
